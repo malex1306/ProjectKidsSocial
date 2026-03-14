@@ -1,6 +1,8 @@
 #![feature(adt_const_params)]
 #![feature(unsized_const_params)]
 pub mod app;
+pub mod components;
+pub mod pages;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]
