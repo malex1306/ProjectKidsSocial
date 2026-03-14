@@ -1,0 +1,12 @@
+    Checking safe-social-kids v0.1.0 (E:\RustRepos\Sozial\safe-social-kids)
+warning: the feature `unsized_const_params` is incomplete and may not be safe to use and/or cause compiler crashes
+ --> src\lib.rs:2:12
+  |
+2 | #![feature(unsized_const_params)]
+  |            ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: see issue #95174 <https://github.com/rust-lang/rust/issues/95174> for more information
+  = note: `#[warn(incomplete_features)]` on by default
+
+warning: `safe-social-kids` (lib) generated 1 warning
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.47s

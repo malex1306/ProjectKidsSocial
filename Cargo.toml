@@ -1,0 +1,45 @@
+[package]
+name = "safe-social-kids"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+leptos = { git = "https://github.com/leptos-rs/leptos", branch = "main", features = ["nightly"] }
+leptos_router = { git = "https://github.com/leptos-rs/leptos", branch = "main", features = ["nightly"] }
+axum = { version = "0.8", optional = true }
+console_error_panic_hook = { version = "0.1", optional = true }
+leptos_axum = { git = "https://github.com/leptos-rs/leptos", branch = "main", optional = true }
+leptos_meta = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
+tokio = { version = "1", features = ["rt-multi-thread"], optional = true }
+wasm-bindgen = { version = "0.2", optional = true }
+
+[features]
+hydrate = ["leptos/hydrate", "dep:console_error_panic_hook", "dep:wasm-bindgen"]
+ssr = [
+    "dep:axum",
+    "dep:tokio",
+    "dep:leptos_axum",
+    "leptos/ssr",
+    "leptos_meta/ssr",
+    "leptos_router/ssr",
+]
+
+[package.metadata.leptos]
+# Wir nennen den Output "app", das ist eindeutig
+output-name = "app"
+tailwind-input-file = "style/tailwind.css"
+tailwind-config-file = "tailwind.config.js"
+site-root = "target/site"
+site-pkg-dir = "pkg"
+# style-file deaktiviert, da wir Tailwind nutzen
+assets-dir = "public"
+site-addr = "127.0.0.1:3000"
+reload-port = 3001
+env = "DEV"
+bin-features = ["ssr"]
+bin-default-features = false
+lib-features = ["hydrate"]
+lib-default-features = false
