@@ -1,7 +1,5 @@
-﻿use leptos::prelude::*; // Das hier ist der wichtigste Import! Er bringt #[component], signal, event_target_value etc.
-use leptos_meta::{Stylesheet, Title}; // provide_meta_context kommt in die app.rs, hier brauchen wir nur die Tags
-use leptos_router::components::{Route, Router, Routes};
-use leptos_router::StaticSegment;
+﻿use leptos::prelude::*;
+use leptos_meta::{Stylesheet, Title};
 
 #[component]
 pub fn FeedPage() -> impl IntoView {
