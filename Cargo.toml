@@ -17,6 +17,7 @@ tokio = { version = "1", features = ["rt-multi-thread"], optional = true }
 wasm-bindgen = { version = "0.2", optional = true }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = { version = "1.0.149" }
+leptos-fluent = { git = "https://github.com/mondeja/leptos-fluent", features = ["nightly"] }
 
 [features]
 hydrate = ["leptos/hydrate", "dep:console_error_panic_hook", "dep:wasm-bindgen"]
@@ -45,3 +46,11 @@ bin-features = ["ssr"]
 bin-default-features = false
 lib-features = ["hydrate"]
 lib-default-features = false
+
+[patch.crates-io]
+# These patches are necessary to ensure all dependencies use the same reactivity engine
+# when using the Git version of Leptos.
+reactive_graph = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
+leptos = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
+leptos_router = { git = "https://github.com/leptos-rs/leptos", branch = "main" }
+leptos_meta = { git = "https://github.com/leptos-rs/leptos", branch = "main" }

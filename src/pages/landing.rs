@@ -1,4 +1,5 @@
-﻿use leptos::prelude::*;
+use leptos::prelude::*;
+use leptos_fluent::tr;
 use crate::models::AppState;
 use crate::components::post_card::PostCard;
 
@@ -12,18 +13,18 @@ pub fn LandingPage() -> impl IntoView {
             <PostCard>
                 <div class="text-center">
                     <h1 class="text-4xl font-black text-orange-500 mb-8 italic tracking-tight">
-                        "SafeSocial"
+                        {move || tr!("landing-title")}
                     </h1>
 
                     <p class="text-gray-600 mb-8 font-medium">
-                        "Der sicherste Ort für dich und deine Freunde."
+                        {move || tr!("landing-description")}
                     </p>
 
                     <button
                         class="w-full py-5 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-black text-xl shadow-xl transform active:scale-95 transition-all"
                         on:click=move |_| set_state.set(AppState::MainFeed)
                     >
-                        "LOS GEHT'S! 🚀"
+                        {move || tr!("landing-start-button")}
                     </button>
                 </div>
             </PostCard>
