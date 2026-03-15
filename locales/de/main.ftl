@@ -1,10 +1,21 @@
 # Common
 app-title = SafeSocial Kids
+app-footer = © 2026 SafeSocial Kids. Alle Rechte vorbehalten.
 
 # Landing Page
 landing-title = SafeSocial
-landing-description = Der sicherste Ort für dich und deine Freunde.
-landing-start-button = LOS GEHT'S! 🚀
+landing-hero-title = DEIN SPACE. DEINE REGELN.
+landing-hero-subtitle = Connecte dich mit deinen Freunden in der sichersten und coolsten Community für Teens.
+landing-start-button = JETZT ENTDECKEN 🚀
+landing-login-button = Login
+landing-register-button = Registrieren
+
+landing-feature-1-title = Echt Sicher
+landing-feature-1-desc = Wir passen auf, dass alles cool bleibt.
+landing-feature-2-title = Full Speed
+landing-feature-2-desc = Chatten, Posten, Liken - alles in Echtzeit.
+landing-feature-3-title = Nur für Euch
+landing-feature-3-desc = 10-16 Jahre. Keine Erwachsenen, kein Stress.
 
 # Parental Check
 parental-check-title = Eltern-Check

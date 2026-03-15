@@ -31,13 +31,13 @@ ssr = [
 ]
 
 [package.metadata.leptos]
-# Wir nennen den Output "app", das ist eindeutig
-output-name = "app"
+# Wir nennen den Output "tailwind", so wie der User es will
+output-name = "tailwind"
 tailwind-input-file = "style/tailwind.css"
 tailwind-config-file = "tailwind.config.js"
 site-root = "target/site"
 site-pkg-dir = "pkg"
-# style-file deaktiviert, da wir Tailwind nutzen
+# Assets Verzeichnis
 assets-dir = "public"
 site-addr = "127.0.0.1:3000"
 reload-port = 3001

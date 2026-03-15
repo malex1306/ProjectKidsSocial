@@ -12,6 +12,7 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <AutoReload options=options.clone() />
                 <HydrationScripts options/>
+                <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
                 <MetaTags/>
             </head>
             <body>
@@ -31,7 +32,6 @@ pub fn App() -> impl IntoView {
 
     leptos_fluent! {
         children: view! {
-                <Stylesheet id="leptos" href="/pkg/app.css"/>
                 <Title text=move || tr!("app-title")/>
 
                 <main>

@@ -1,14 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: {
-    relative: true,
-    files: ["*.html", "./src/**/*.rs"],
+    files: [
+      "./src/**/*.rs",
+      "./*.html"
+    ],
+    // Transform für Leptos-spezifische Syntax (class:name=bool)
     transform: {
-      rs: (content) => content.replace(/class:([-a-zA-Z0-9_/:\[\]]+)=/g, ' $1 '),
+      rs: (content) => content.replace(/(?:class|id):/g, ""),
     },
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
