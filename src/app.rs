@@ -2,9 +2,7 @@ use crate::models::AppState;
 use crate::pages::feed::FeedPage;
 use crate::pages::landing::LandingPage;
 use leptos::prelude::*;
-use leptos_meta::{provide_meta_context, Stylesheet, Title, MetaTags}; // MetaTags wichtig für Head!
-
-// Diese Funktion braucht der Server in main.rs!
+use leptos_meta::{provide_meta_context, Stylesheet, Title, MetaTags};
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
         <!DOCTYPE html>
