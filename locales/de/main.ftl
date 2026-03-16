@@ -7,8 +7,8 @@ landing-title = SafeSocial
 landing-hero-title = DEIN SPACE. DEINE REGELN.
 landing-hero-subtitle = Connecte dich mit deinen Freunden in der sichersten und coolsten Community für Teens.
 landing-start-button = JETZT ENTDECKEN 🚀
-landing-login-button = Login
-landing-register-button = Registrieren
+landing-login-button = LOGIN
+landing-register-button = JETZT ANSCHLIESSEN
 
 landing-feature-1-title = Echt Sicher
 landing-feature-1-desc = Wir passen auf, dass alles cool bleibt.
@@ -18,9 +18,21 @@ landing-feature-3-title = Nur für Euch
 landing-feature-3-desc = 10-16 Jahre. Keine Erwachsenen, kein Stress.
 
 # Parental Check
-parental-check-title = Eltern-Check
-parental-check-description = Nur für Erwachsene! Bitte bestätigen.
-parental-check-button = Erfolg simulieren
+# Auth Pages
+auth-login-title = BACK IN THE GAME
+auth-register-title = JOIN THE CREW
+auth-username = USERNAME_
+auth-password = PASSWORD_
+auth-email = EMAIL_ (ELTERN)
+auth-login-submit = REIN DA! 🚀
+auth-register-submit = SETUP STARTEN ⚡
+auth-no-account = NOCH KEIN ACCOUNT?
+auth-have-account = SCHON DABEI?
+
+# Parental Check Refined
+parental-check-title = ELTERN-CHECK_
+parental-check-description = STOPP! HIER MÜSSEN DEINE ELTERN KURZ RAN. NUR KURZ BESTÄTIGEN UND DANN GEHT'S LOS.
+parental-check-button = ZUGRIFF ERLAUBEN 🛡️
 
 # Feed Page
 feed-title = SafeSocial Kids - Feed

@@ -37,20 +37,9 @@ pub fn App() -> impl IntoView {
                 <main>
                     {move || match state.get() {
                         AppState::Landing => view! { <crate::pages::landing::LandingPage /> }.into_any(),
-                        AppState::ParentalCheck => view! {
-                            <div class="min-h-screen flex items-center justify-center bg-blue-50">
-                                <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-4 border-blue-200">
-                                    <h1 class="text-2xl font-black text-blue-600 mb-4">{move || tr!("parental-check-title")}</h1>
-                                    <p class="text-gray-600 mb-6">{move || tr!("parental-check-description")}</p>
-                                    <button
-                                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-transform active:scale-95"
-                                        on:click=move |_| set_state.set(AppState::MainFeed)
-                                    >
-                                        {move || tr!("parental-check-button")}
-                                    </button>
-                                </div>
-                            </div>
-                        }.into_any(),
+                        AppState::Login => view! { <crate::pages::auth::LoginPage /> }.into_any(),
+                        AppState::Register => view! { <crate::pages::auth::RegisterPage /> }.into_any(),
+                        AppState::ParentalCheck => view! { <crate::pages::auth::ParentalCheckPage /> }.into_any(),
                         AppState::MainFeed => view! { <crate::pages::feed::FeedPage /> }.into_any(),
                     }}
                 </main>

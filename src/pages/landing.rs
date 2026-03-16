@@ -22,10 +22,16 @@ pub fn LandingPage() -> impl IntoView {
                         </div>
                     </div>
                     <div class="flex items-center gap-6">
-                        <button class="hidden sm:block font-black text-sm tracking-widest hover:text-neon-lime transition-all">
+                        <button 
+                            on:click=move |_| set_state.set(AppState::Login)
+                            class="hidden md::block font-bold text-sm text-slate-400 hover:text-white transition-colors"
+                        >
                             {move || tr!("landing-login-button")}
                         </button>
-                        <button class="px-8 py-4 bg-hot-pink text-white font-black text-sm border-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                        <button 
+                            on:click=move |_| set_state.set(AppState::Register)
+                            class="px-6 py-2.5 rounded-xl font-black text-sm bg-white text-slate-950 hover:bg-cyan-400 transition-all shadow-xl active:scale-95"
+                        >
                             {move || tr!("landing-register-button")}
                         </button>
                     </div>
@@ -49,25 +55,40 @@ pub fn LandingPage() -> impl IntoView {
                             "STATUS: 4.2K_TEENS_ONLINE"
                         </div>
 
-                        <div class="relative">
-                            <h1 class="text-7xl md:text-[10rem] font-black leading-[0.8] tracking-tight font-heading text-white">
-                                <span class="block hover:animate-glitch select-none mb-2">"DEIN"</span>
-                                <span class="block text-neon-lime italic -ml-4 filter drop-shadow-[8px_8px_0px_#000]">"SPACE."</span>
-                                <div class="inline-block bg-hot-pink text-white px-8 py-2 mt-4 sticker-tilt-r border-neo shadow-[8px_8px_0px_#000]">"REGELN."</div>
+                        <div class="relative space-y-4">
+                            <h1 class="text-7xl md:text-[9rem] font-black leading-[0.85] font-heading text-white uppercase select-none">
+                                <span class="block hover:animate-glitch">"DEIN"</span>
+                                <span class="block text-neon-lime italic -ml-2 filter drop-shadow-[6px_6px_0px_#000]">"SPACE."</span>
+                            </h1>
+                            
+                            <h1 class="text-6xl md:text-[8rem] font-black leading-[0.85] font-heading text-white uppercase select-none pt-4">
+                                <span class="block hover:animate-glitch">"DEINE"</span>
+                                <div class="inline-block bg-hot-pink text-white px-6 py-2 mt-2 sticker-tilt-r border-neo shadow-[6px_6px_0px_#000] text-5xl md:text-8xl">
+                                    "REGELN."
+                                </div>
                             </h1>
                         </div>
 
-                        <p class="text-2xl md:text-4xl text-slate-300 max-w-xl mx-auto lg:mx-0 font-black leading-tight tracking-tight mt-10">
-                            {move || tr!("landing-hero-subtitle")}
-                        </p>
+                        <div class="relative">
+                            <p class="text-xl md:text-3xl text-white font-black leading-tight tracking-tight max-w-xl mx-auto lg:mx-0 p-4 bg-neon-lime text-black border-neo sticker-tilt-l inline-block">
+                                {move || tr!("landing-hero-subtitle")}
+                            </p>
+                        </div>
 
                         <div class="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-12">
                             <button 
-                                on:click=move |_| set_state.set(AppState::MainFeed)
-                                class="group relative inline-block px-14 py-10 bg-neon-lime text-black font-black text-4xl border-neo hover:scale-105 active:scale-95 transition-all"
+                                on:click=move |_| set_state.set(AppState::Register)
+                                class="group relative inline-block px-12 py-8 bg-neon-lime text-black font-black text-3xl uppercase border-neo-lime hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all"
                             >
                                 <span class="relative z-10">{move || tr!("landing-start-button")}</span>
-                                <div class="absolute inset-0 bg-hot-pink translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+                                <div class="absolute inset-0 bg-hot-pink translate-x-4 translate-y-4 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></div>
+                            </button>
+                            
+                            <button 
+                                on:click=move |_| set_state.set(AppState::Login)
+                                class="inline-block px-12 py-8 bg-black text-white font-black text-3xl uppercase border-neo hover:bg-slate-900 transition-all"
+                            >
+                                {move || tr!("landing-login-button")}
                             </button>
                         </div>
                     </div>

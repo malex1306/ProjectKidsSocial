@@ -1,8 +1,10 @@
-﻿use serde::{ Serialize, Deserialize };
+use serde::{ Serialize, Deserialize };
 
 #[derive(Deserialize, Serialize, Debug, Clone,Copy, PartialEq, Eq)]
 pub enum AppState {
     Landing,
+    Login,
+    Register,
     ParentalCheck,
     MainFeed
 }
