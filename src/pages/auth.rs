@@ -55,7 +55,7 @@ pub fn LoginPage() -> impl IntoView {
                             on:click=move |_| set_state.set(AppState::Register)
                             class="text-xs font-black text-slate-500 hover:text-white transition-colors"
                         >
-                            {move || tr!("auth-no-account")} " -> JOIN THE CREW"
+                            {move || tr!("auth-no-account")} " -> JOIN THE RULERZ"
                         </button>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ pub fn RegisterPage() -> impl IntoView {
 
                 // Decorative Sticker
                 <div class="absolute -bottom-10 -left-10 bg-neon-lime border-4 border-black p-6 -rotate-12 font-black text-black">
-                   "CREW ACCESS_01"
+                   "RULERZ ACCESS_01"
                 </div>
             </div>
         </div>

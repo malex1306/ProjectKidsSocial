@@ -16,9 +16,9 @@ pub fn LandingPage() -> impl IntoView {
             <nav class="fixed top-0 w-full z-100 bg-deep-black/95 border-b-8 border-black px-6 py-6 lg:py-8">
                 <div class="max-w-7xl mx-auto flex justify-between items-center">
                     <div class="flex items-center gap-3 px-6 py-2 bg-neon-lime text-black border-neo sticker-tilt-l hover:rotate-0 transition-transform cursor-pointer">
-                        <span class="text-4xl font-black font-heading leading-none">"S"</span>
-                        <div class="text-2xl font-black tracking-tighter">
-                            {move || tr!("landing-title")}
+                        <span class="text-4xl font-black font-heading leading-none">"R"</span>
+                        <div class="text-2xl font-black tracking-[0.05em] flex items-center">
+                            "RULE" <span class="mx-1 text-black">"."</span> "Z"
                         </div>
                     </div>
                     <div class="flex items-center gap-6">
@@ -52,7 +52,7 @@ pub fn LandingPage() -> impl IntoView {
                     <div class="lg:col-span-7 space-y-12 text-center lg:text-left relative z-20">
                         <div class="inline-flex items-center gap-3 px-6 py-2 bg-slate-900 border-neo-lime font-mono text-xs font-black tracking-[0.3em] sticker-tilt-l">
                             <span class="w-3 h-3 bg-neon-lime animate-pulse"></span>
-                            "STATUS: 4.2K_TEENS_ONLINE"
+                            "STATUS: 4.2K_RULERZ_ONLINE"
                         </div>
 
                         <div class="relative space-y-4">
@@ -165,8 +165,8 @@ pub fn LandingPage() -> impl IntoView {
             // Footer
             <footer class="py-32 px-6 bg-black text-white relative">
                 <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-16">
-                    <div class="text-8xl md:text-[12rem] font-black font-heading tracking-tighter text-neon-lime sticker-tilt-l hover:rotate-0 transition-transform select-none">
-                         "SAFESOCIAL"
+                    <div class="text-8xl md:text-[12rem] font-black font-heading tracking-[0.02em] text-neon-lime sticker-tilt-l hover:rotate-0 transition-transform select-none flex items-baseline">
+                         "RULE" <span class="mx-2 md:mx-4">"."</span> "Z"
                     </div>
                     <div class="flex flex-wrap justify-center gap-12 font-black text-sm tracking-[0.3em]">
                         <a href="#" class="hover:text-hot-pink hover:line-through transition-all">"DATENSCHUTZ"</a>
